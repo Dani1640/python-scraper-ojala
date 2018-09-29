@@ -6,10 +6,11 @@ With this script you can download all videos from oja.la e-learning platform.
 
 # Instructions!
  - Complete file config.ojala.txt with this instructions:
-        - line 1: user|tu@email.com
-        - line 2: pass|YouPassword
-        - line 3: Directorio|YouPathWhereDownloadFiles
-        - line 4: ChromeDriver|PathWhereIsChromeDriver.exe
+  - line 1: user|tu@email.com
+  - line 2: pass|YouPassword
+  - line 3: Directorio|YouPathWhereDownloadFiles
+  - line 4: ChromeDriver|PathWhereIsChromeDriver.exe
+
 # Libraries:
 ```sh
   - from selenium import webdriver
