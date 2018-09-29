@@ -1,5 +1,5 @@
-user|acarrilloluna@gmail.com
-pass|peopleojala
+user|xxx@xxx.cl
+pass|YouPassword
 Directorio|D:\OjalaCurso
 ChromeDriver|C:\Users\dsoto\OneDrive\Escritorio\chromedriver.exe
 https://oja.la/curso/desarrollo-web/aprende-como-usar-google-analytics-de-forma-simple-para-tu-pagina-web-parte-II<OK>
