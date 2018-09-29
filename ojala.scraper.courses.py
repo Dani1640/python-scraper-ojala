@@ -71,24 +71,27 @@ def getConfigAndCoursesForDownload():
 def DownloadVideosOfCourse(driver,chapters,directory):
     directory_new = directory + "\\" + chapters[0][2].replace('Ojala | ', '')
     CreateDirectoryOfCourse(directory_new)
-    for chapter in chapters:  
-        driver.get(chapter[0])
-        time.sleep(4) 
-        html = str(driver.page_source)
-        html = html[ html.find('<video id="wistia_simple_video_') : ]
-        html = html[ html.find('src="https://embedwistia-a.akamaihd.net/deliveries') : ]
-        html = html[ html.find('https://embedwistia-a.akamaihd.net/deliveries') : ]
-        url_video =  html[ : html.find('"') ]
-        name_file = directory_new + '\\' + chapter[1] + ".mp4"
-        
-        if not(url_video == ''):
-            if not os.path.exists(name_file):
-                try:
-                    request.urlretrieve( url_video , name_file ) 
-                    print(name_file + ' OK')
-                except FileNotFoundError:
-                    #print(str(FileNotFoundError) + 'ERROR ')
-                    print(name_file + 'ERROR ')
+    for chapter in chapters:
+        if '<OK>' not in chapter[0]:
+            driver.get(chapter[0])
+            time.sleep(4) 
+            html = str(driver.page_source)
+            html = html[ html.find('<video id="wistia_simple_video_') : ]
+            html = html[ html.find('src="https://embedwistia-a.akamaihd.net/deliveries') : ]
+            html = html[ html.find('https://embedwistia-a.akamaihd.net/deliveries') : ]
+            url_video =  html[ : html.find('"') ]
+            name_file = directory_new + '\\' + chapter[1] + ".mp4"
+            
+            if not(url_video == ''):
+                if not os.path.exists(name_file):
+                    try:
+                        request.urlretrieve( url_video , name_file ) 
+                        print(name_file + ' OK')
+                    except:
+                        #print(str(FileNotFoundError) + 'ERROR ')
+                        print(name_file + 'ERROR ')
+        else:
+            print(chapter[0]+' OK')
             
 
 def CreateDirectoryOfCourse(directory):
@@ -104,8 +107,11 @@ def main():
     logInOjala(driver,config)
     #Find all courses from plain text file
     for url_page_course in courses:
-        chapters = getAllLinkByCourse(driver,url_page_course)
-        #Download All Videos of Course
-        DownloadVideosOfCourse(driver,chapters,directory)
+        if '<OK>' not in url_page_course:
+            chapters = getAllLinkByCourse(driver,url_page_course)
+            #Download All Videos of Course
+            DownloadVideosOfCourse(driver,chapters,directory)
+        else:
+            print(url_page_course + ' YA DESCARGADO')
 
 main()
