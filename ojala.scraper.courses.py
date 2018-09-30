@@ -69,7 +69,7 @@ def getConfigAndCoursesForDownload():
 
 # Download All Videos from a Course
 def DownloadVideosOfCourse(driver,chapters,directory):
-    directory_new = directory + "\\" + chapters[0][2].replace('Ojala | ', '')
+    directory_new = directory + "\\" + chapters[0][2].replace('Ojala | ', '').replace(':', '')
     CreateDirectoryOfCourse(directory_new)
     for chapter in chapters:
         if '<OK>' not in chapter[0]:
