@@ -1,5 +1,3 @@
-user|xxx@xxx.cl
-pass|YouPassword
 user|acarrilloluna@gmail.com
 pass|peopleojala
 Directorio|D:\OjalaCurso
