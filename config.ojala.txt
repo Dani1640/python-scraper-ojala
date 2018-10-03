@@ -1,5 +1,5 @@
-user|acarrilloluna@gmail.com
-pass|peopleojala
+user|xxx@gmail.com
+pass|xxx
 Directorio|D:\OjalaCurso
 ChromeDriver|D:\Github\python-scraper-ojala\chromedriver.exe
 https://oja.la/cursos/otros
