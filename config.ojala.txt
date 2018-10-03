@@ -1,7 +1,7 @@
 user|xxx@xxx.cl
 pass|YouPassword
+user|acarrilloluna@gmail.com
+pass|peopleojala
 Directorio|D:\OjalaCurso
 ChromeDriver|D:\Github\python-scraper-ojala\chromedriver.exe
-https://oja.la/curso/otros/primeros-pasos-con-adobe-illustrator-cs6-parte-3
-https://oja.la/curso/otros/aprende-a-dibujar-mas-facil-y-rapido-con-IllustratorCC
-https://oja.la/curso/otros/primeros-pasos-con-adobe-illustrator-cs6-parte-2
+https://oja.la/cursos/otros
