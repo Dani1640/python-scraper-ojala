@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 user|acarrilloluna@gmail.com
 pass|peopleojala
 Directorio|D:\OjalaCurso\_wordpress
@@ -21,6 +22,7 @@ https://oja.la/curso/wordpress/crea-tiendas-en-linea-usando-woocommerce-en-wordp
 https://oja.la/curso/wordpress/aprende-a-crear-sitios-seguros-con-wordpress
 https://oja.la/curso/wordpress/aprende-a-crear-themes-para-wordpress-y-dale-la-mejor-cara-a-tu-sitio-web
 https://oja.la/curso/wordpress/aprende-a-planear-tu-propia-tienda-en-linea-con-wordpress
+https://oja.la/curso/wordpress/aprende-a-crear-tu-propia-pagina-web-con-wordpress
 =======
 user|xxx@gmail.com
 pass|xxx
