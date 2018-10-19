@@ -1,7 +1,3 @@
-user|acarrilloluna@gmail.com
-pass|peopleojala
-Directorio|D:\OjalaCurso\_wordpress
-ChromeDriver|D:\Github\python-scraper-ojala\chromedriver.exe
 https://oja.la/curso/wordpress/aprende-a-desarrollar-temas-para-wordpress-con-el-framework-genesis
 https://oja.la/curso/wordpress/plugins-de-wordpress-backups-y-botones-para-redes-sociales
 https://oja.la/curso/wordpress/conoce-los-plugins-de-wordpress-para-seo-y-optimiza-tu-trafico

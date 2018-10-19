@@ -30,7 +30,7 @@ def logInOjala(driver,config):
 
 # Get config from plain text file
 def getConfigAndCoursesForDownload():
-    f = open('config.ojala.txt')
+    f = open('config.ojala2.txt')
     lines = f.readlines()
     courses = []
     config = []
@@ -105,7 +105,10 @@ def DownloadVideosOfCourse(driver,chapters,directory):
                         #print(str(FileNotFoundError) + 'ERROR ')
                         print(name_file + ' ERROR ')
                 else:
-                    print(name_file + ' DESCARGADO')
+                    print(name_file + ' YA DESCARGADO')
+            
+            
+
         else:
             print(chapter[0]+' OK')
             
@@ -116,7 +119,7 @@ def CreateDirectoryOfCourse(directory):
 
 def DeleteCharactesSpecials(word):
     word = word.replace('\\','')
-    word = word.replace('\/','')
+#    word = word.replace('\/','')
     word = word.replace(':','')
     word = word.replace('*','')
     word = word.replace('?','')
@@ -125,7 +128,15 @@ def DeleteCharactesSpecials(word):
     word = word.replace('>','')
     word = word.replace('|','')
     return word
-    
+
+def SaveLinksFileTXT(links):
+    file1 = open(r"Links.txt","w+") 
+    txt = ''
+    for link in links:
+        txt += link + '\n'
+    file1.write(txt)
+    file1.close() 
+    print('Links guardados')
 
 def main():
     #Get config from plain text file
@@ -137,6 +148,7 @@ def main():
     #Find all courses from plain text file
     for url_page_group in courses:
         links  = getAllCourses(driver, url_page_group)
+        SaveLinksFileTXT(links)
         for url_course in links:
             if '<OK>' not in url_course:
                 chapters = getAllLinkByCourse(driver,url_course)

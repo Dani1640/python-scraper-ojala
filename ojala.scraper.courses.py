@@ -91,7 +91,7 @@ def DownloadVideosOfCourse(driver,chapters,directory):
                         #print(str(FileNotFoundError) + 'ERROR ')
                         print(name_file + 'ERROR ')
         else:
-            print(chapter[0]+' OK')
+            print(chapter[0]+' ESTABA OK')
             
 
 def CreateDirectoryOfCourse(directory):
