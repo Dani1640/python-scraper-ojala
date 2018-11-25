@@ -6,6 +6,7 @@ from urllib import request
 import time
 import os
 
+
 # Setup Scrapper 
 def setupChrome(path_chrome_dv, directory):
     options = Options()
@@ -39,7 +40,6 @@ def getAllLinkByCourse(driver, url_page_course):
         name_course = driver.title
         links.append([link,name_chapter,name_course])
     return links
-#https://oja.la/curso/desarrollo-web/aprende-como-usar-google-analytics-de-forma-simple-para-tu-pagina-web-parte-II
 
 # Get config from plain text file
 def getConfigAndCoursesForDownload():
@@ -67,10 +67,36 @@ def getConfigAndCoursesForDownload():
             courses.append(line)
     return config, directory, courses, path_chrome_dv
 
+def GetFileFromHttp(url, file_name):
+    #file_name = url.split('/')[-1]
+    r = request.get(url, stream = True)
+    print( r.headers.get('content-type') )
+    f = open(file_name, 'wb')
+    for chunk in r.iter_content(chunk_size=512 * 1024): 
+        if chunk: # filter out keep-alive new chunks
+            f.write(chunk)
+    f.close()
+    return 
+
 # Download All Videos from a Course
 def DownloadVideosOfCourse(driver,chapters,directory):
-    directory_new = directory + "\\" + chapters[0][2].replace('Ojala | ', '').replace(':', '')
+    directory_new = directory + "\\" + DeleteCharactesSpecials(chapters[0][2].replace('Ojala | ', '').replace(':', ''))
     CreateDirectoryOfCourse(directory_new)
+    '''
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    chapters.pop(0)
+    '''
     for chapter in chapters:
         if '<OK>' not in chapter[0]:
             driver.get(chapter[0])
@@ -80,8 +106,8 @@ def DownloadVideosOfCourse(driver,chapters,directory):
             html = html[ html.find('src="https://embedwistia-a.akamaihd.net/deliveries') : ]
             html = html[ html.find('https://embedwistia-a.akamaihd.net/deliveries') : ]
             url_video =  html[ : html.find('"') ]
-            name_file = directory_new + '\\' + chapter[1] + ".mp4"
-            
+            new_name_file = DeleteCharactesSpecials(chapter[1])
+            name_file = directory_new + '\\' + new_name_file + ".mp4"
             if not(url_video == ''):
                 if not os.path.exists(name_file):
                     try:
@@ -89,15 +115,40 @@ def DownloadVideosOfCourse(driver,chapters,directory):
                         print(name_file + ' OK')
                     except:
                         #print(str(FileNotFoundError) + 'ERROR ')
-                        print(name_file + 'ERROR ')
+                        print(name_file + ' ERROR ')
+                else:
+                    print(name_file + ' YA DESCARGADO')
+            '''
+            try :
+               url_material = driver.find_element_by_class_name('list-group').find_element_by_class_name('list-group-item').get_attribute('href')
+               name_material = directory_new + '\\' + chapter[1] + url_material[ len(url_material)-4 : ]
+               driver.get(url_material)
+               #GetFileFromHttp(url_material, name_material)
+               print('Material Descargado')
+            except:
+                print('No hay material de descarga')
+            '''
+
         else:
             print(chapter[0]+' ESTABA OK')
-            
 
 def CreateDirectoryOfCourse(directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
-        
+
+def DeleteCharactesSpecials(word):
+    word = word.replace('\\','')
+    word = word.replace('/','')
+    word = word.replace(':','')
+    word = word.replace('*','')
+    word = word.replace('?','')
+    word = word.replace('¿','')
+    word = word.replace('"','')
+    word = word.replace('<','')
+    word = word.replace('>','')
+    word = word.replace('|','')
+    return word
+
 def main():
     #Get config from plain text file
     config, directory, courses, path_chrome_dv = getConfigAndCoursesForDownload()

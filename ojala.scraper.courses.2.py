@@ -106,7 +106,8 @@ def DownloadVideosOfCourse(driver,chapters,directory):
                         print(name_file + ' ERROR ')
                 else:
                     print(name_file + ' YA DESCARGADO')
-            
+        
+        
             
 
         else:

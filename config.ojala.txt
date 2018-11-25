@@ -1,32 +1,6 @@
-<<<<<<< HEAD
 user|acarrilloluna@gmail.com
 pass|peopleojala
-Directorio|D:\OjalaCurso\_wordpress
+Directorio|D:\OjalaCurso\_iOS
 ChromeDriver|D:\Github\python-scraper-ojala\chromedriver.exe
-https://oja.la/curso/wordpress/aprende-a-desarrollar-temas-para-wordpress-con-el-framework-genesis
-https://oja.la/curso/wordpress/plugins-de-wordpress-backups-y-botones-para-redes-sociales
-https://oja.la/curso/wordpress/conoce-los-plugins-de-wordpress-para-seo-y-optimiza-tu-trafico
-https://oja.la/curso/wordpress/plugins-de-wordpress-crea-formularios-facilmente
-https://oja.la/curso/wordpress/aprende-a-usar-el-theme-underscore-en-tus-desarrollos-con-wordpress-parte-2
-https://oja.la/curso/wordpress/aprende-a-usar-el-theme-underscore-en-tus-desarrollos-con-wordpress-parte-3
-https://oja.la/curso/wordpress/aprende-a-usar-el-theme-underscore-en-tus-desarrollos-con-wordpress
-https://oja.la/curso/wordpress/aprende-paso-a-paso-todo-sobre-wordpress-parte-3
-https://oja.la/curso/wordpress/aprende-paso-a-paso-todo-sobre-wordpress-parte-2
-https://oja.la/curso/wordpress/aprende-paso-a-paso-todo-sobre-wordpress-parte-1
-https://oja.la/curso/wordpress/aprende-a-manejar-la-jeraraquia-y-temas-hijos-con-wordpress
-https://oja.la/curso/wordpress/aprende-a-crear-sitios-web-de-una-sola-pagina-en-wordpress
-https://oja.la/curso/wordpress/aprende-a-aplicar-bootstrap-en-tus-desarrollos-web-con-wordpress
-https://oja.la/curso/wordpress/como-crear-una-red-social-como-facebook-paso-a-paso-con-wordpress-usando-budypress
-https://oja.la/curso/wordpress/como-crear-plugins-para-wordpress
-https://oja.la/curso/wordpress/crea-tiendas-en-linea-usando-woocommerce-en-wordpress
-https://oja.la/curso/wordpress/aprende-a-crear-sitios-seguros-con-wordpress
-https://oja.la/curso/wordpress/aprende-a-crear-themes-para-wordpress-y-dale-la-mejor-cara-a-tu-sitio-web
-https://oja.la/curso/wordpress/aprende-a-planear-tu-propia-tienda-en-linea-con-wordpress
-https://oja.la/curso/wordpress/aprende-a-crear-tu-propia-pagina-web-con-wordpress
-=======
-user|xxx@gmail.com
-pass|xxx
-Directorio|D:\OjalaCurso
-ChromeDriver|D:\Github\python-scraper-ojala\chromedriver.exe
-https://oja.la/cursos/otros
->>>>>>> 5913e35242027eea672d82c8cceaae6405bbc74c
+https://oja.la/curso/ios/curso-avanzado-de-aplicaciones-para-iphone-n-ipad
+https://oja.la/curso/ios/desarrollo-basico-de-aplicaciones-para-iphone-n-ipad

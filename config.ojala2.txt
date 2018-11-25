@@ -1,5 +1,5 @@
 user|acarrilloluna@gmail.com
 pass|peopleojala
-Directorio|D:\OjalaCurso\_Wordpress
+Directorio|D:\OjalaCurso\_iOS
 ChromeDriver|D:\Github\python-scraper-ojala\chromedriver.exe
-https://oja.la/cursos/wordpress
+https://oja.la/cursos/ios
